@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(127, 255, 212, 0.367);
+
+}
+
+
+.formatacao{
+    width: 45%;
+    height: 100%;
+    border: 3px solid rgb(219, 207, 41);
+    text-align: center;
+}
