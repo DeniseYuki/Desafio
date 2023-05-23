@@ -3,11 +3,14 @@
 
 <head>
     <title>Informações Nutricionais</title>
+
+
     <style>
         table {
             border-collapse: collapse;
             text-align: center;
             width: 100%;
+
         }
 
         th,
@@ -16,80 +19,147 @@
             padding: 7px;
             text-align: center;
         }
+
+        body {
+            background-color: rgba(127, 255, 212, 0.367);
+
+        }
+
+
+        .formatacao {
+            width: 55%;
+            height: 100%;
+            border: 3px solid rgb(219, 207, 41);
+            text-align: center;
+        }
     </style>
-    <link rel="stylesheet" href="/estrtura.css">
+
+
+
+
 </head>
 
 <body>
 
-    <img src="Depositphotos_160465024_original3-1-895x430.jpg" width="45%" height="100%"
+    <img src="Depositphotos_160465024_original3-1-895x430.jpg" width="55%" height="100%"
         border="2px solid rgb(219, 207, 41)">
 
     <div class="formatacao">
         <h1>Informações Nutricionais</h1>
-        <form>
-            <label for="alimento">Alimento:</label>
-            <input type="text" id="alimento" name="alimento" /><br /><br />
+        <div id="teste">
 
 
-            <label for="calorias">Calorias:</label>
-            <input type="number" id="calorias" name="calorias" /><br /><br />
+            <form>
+                <label for="alimento">Alimento:</label>
+                <input type="text" id="alimento" name="alimento" /><br /><br />
 
 
-            <label for="quantidade">Quantidade:</label>
-            <input type="number" id="quantidade" name="quantidade" /><br /><br />
+                <label for="calorias">Calorias:</label>
+                <input type="number" id="calorias" name="calorias" /><br /><br />
 
 
-            <button type="button" onclick="salvarInformacao()">Salvar</button>
-            <button type="button" onclick="apagarInformacao()">Limpar Cadastro</button>
-            <button type="reset" onclick="limpaCaixa()">Limpar Campo</button>
-        </form>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" /><br /><br />
 
-        <h2>Informações Nutricionais</h2>
-        <table id="tabela">
-            <tr>
-                <th>Alimento</th>
-                <th>Calorias</th>
-                <th>Quantidade</th>
-            </tr>
-        </table>
-    </div>
 
-    <script>
-        function salvarInformacao() {
-            var alimento = document.getElementById("alimento").value;
-            var calorias = document.getElementById("calorias").value;
-            var quantidade = document.getElementById("quantidade").value;
+                <button type="button" onclick="salvarInformacao()"><img src="https://github.com/DeniseYuki/Desafio/blob/main/download.png?raw=true" width="15px" height="15px" alt="Salvar">Salvar</button>
+                <button type="button" onclick="apagarInformacao()"><img src="https://github.com/DeniseYuki/Desafio/blob/main/limpar.png?raw=true"width="15px" height="15px" alt="Apagar">Apagar Historico</button>
+                <button type="reset" onclick="limpaCaixa()"><img src="https://github.com/DeniseYuki/Desafio/blob/main/limpar2.jpg?raw=true"width="15px" height="15px" alt="Apagar">Apagar campo</button>
+            </form>
 
-            var tabela = document.getElementById("tabela");
-            var newRow = tabela.insertRow();
-            var cell1 = newRow.insertCell(0);
-            cell1.innerHTML = alimento;
-            var cell2 = newRow.insertCell(1);
-            cell2.innerHTML = calorias;
-            var cell3 = newRow.insertCell(2);
-            cell3.innerHTML = quantidade;
+
+
+
+
+
+            <h2>Informações Nutricionais</h2>
+            <table id="tabela">
+                <tr>
+                    <th>Alimento</th>
+                    <th>Calorias</th>
+                    <th>Quantidade</th>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+        <script>
+
+
+
+            function salvarInformacao() {
+                var alimento = document.getElementById("alimento").value;
+                var calorias = document.getElementById("calorias").value;
+                var quantidade = document.getElementById("quantidade").value;
+
+                var tabela = document.getElementById("tabela");
+                var newRow = tabela.insertRow();
+
+
+                if (alimento === "") {
+                    alert('Erro, digite o nome do alimento!');
+                    return;
+                }
+                else if (calorias === "") {
+                    alert('Erro, digite as calorias!');
+                    return;
+
+                }
+                else if (quantidade === "") {
+                    alert('Erro, digite a quantidade!');
+                    return;
+
+                }
+                else {
+                    var cell1 = newRow.insertCell(0);
+                    cell1.innerHTML = alimento;
+                    var cell2 = newRow.insertCell(1);
+                    cell2.innerHTML = calorias;
+                    var cell3 = newRow.insertCell(2);
+                    cell3.innerHTML = quantidade;
+
+                }
+
+
 
             // Limpar campos de entrada
             document.getElementById("alimento").value = "";
             document.getElementById("calorias").value = "";
             document.getElementById("quantidade").value = "";
-        }
-
-        function apagarInformacao() {
-            var tabela = document.getElementById("tabela");
-            tabela.innerHTML = "<tr><th>Alimento</th><th>Calorias</th><th>Quantidade</th></tr>";
-        }
+            }
 
 
-        function limpaCaixa() {
-            document.getElementById("alimento").value = "";
-            document.getElementById("calorias").value = "";
-            document.getElementById("quantidade").value = "";
+
+            function apagarInformacao() {
+                var tabela = document.getElementById("tabela");
+                tabela.innerHTML = "<tr><th>Alimento</th><th>Calorias</th><th>Quantidade</th></tr>";
+            }
 
 
-        }
-    </script>
+            function limpaCaixa() {
+                document.getElementById("alimento").value = "";
+                document.getElementById("calorias").value = "";
+                document.getElementById("quantidade").value = "";
+
+
+            }
+
+
+
+        </script>
+
+    </div>
+
+
+
+
+
+
+
+
 </body>
 
 </html>
