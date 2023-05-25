@@ -10,39 +10,40 @@
             border-collapse: collapse;
             text-align: center;
             width: 100%;
-
+            border-radius: 15cqmax;
         }
 
         th,
         td {
-            border: 0.5px solid rgb(219, 207, 41);
+            
+            border: 1px solid rgba(41, 219, 136, 0.888);
             padding: 7px;
             text-align: center;
+           
+    
         }
 
-        body {
-            background-color: rgba(127, 255, 212, 0.367);
+       
 
-        }
-
-
-        .formatacao {
-            width: 55%;
-            height: 100%;
-            border: 3px solid rgb(219, 207, 41);
-            text-align: center;
-        }
     </style>
 
 
+<link rel="stylesheet" href="/model/estilo.css">
 
 
 </head>
 
 <body>
 
-    <img src="Depositphotos_160465024_original3-1-895x430.jpg" width="55%" height="100%"
-        border="2px solid rgb(219, 207, 41)">
+        <div class="format">
+            <img src="Depositphotos_160465024_original3-1-895x430.jpg" class="minha-imagem">
+            <img src="Depositphotos_160465024_original3-1-895x430.jpg" class="minha-imagem1">
+            <div class="titulo"> <h1>Nutrição com Paula </h1></div></div>
+        
+       
+
+<br>
+<br>
 
     <div class="formatacao">
         <h1>Informações Nutricionais</h1>
@@ -65,13 +66,32 @@
                 <button type="button" onclick="salvarInformacao()"><img src="https://github.com/DeniseYuki/Desafio/blob/main/download.png?raw=true" width="15px" height="15px" alt="Salvar">Salvar</button>
                 <button type="button" onclick="apagarInformacao()"><img src="https://github.com/DeniseYuki/Desafio/blob/main/limpar.png?raw=true"width="15px" height="15px" alt="Apagar">Apagar Historico</button>
                 <button type="reset" onclick="limpaCaixa()"><img src="https://github.com/DeniseYuki/Desafio/blob/main/limpar2.jpg?raw=true"width="15px" height="15px" alt="Apagar">Apagar campo</button>
+           <br>
+           <br>
+           <br>
+           <br>
+                <div class="retangulo"><h3> <label for="graos"> Escolha o Grão: </label></h3>
+                    <select name="graos" id="graos">
+                    <option value="quinoa">Quinoa</option>
+                    <option value="aveia">Aveia</option>
+                    <option value="centeio">Centeio</option>
+                    <option value="lentilha">Lentilha</option>
+                </select>
+
+
+           </div>
+           
+           
+           
+           
+           
             </form>
 
 
 
+<br>
 
-
-
+<div class="formatacao1">
             <h2>Informações Nutricionais</h2>
             <table id="tabela">
                 <tr>
@@ -82,7 +102,7 @@
             </table>
         </div>
 
-
+</div>
 
 
 
