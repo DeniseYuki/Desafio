@@ -1,38 +1,51 @@
 body {
     background-color: rgba(59, 231, 91, 0.252);
+    padding: 1%;
+    position:relative;
+    display: flexbox;
+}
+
+header {
+    text-align: center;
+    
 
 }
-.minha-imagem{
+text {
+text-align: center;
+text-decoration: underline;
+color:darkgreen;
+}
+
+.minha-imagem {
     border-radius: 100%;
     border: 10px solid rgba(41, 219, 53, 0.377);
-    width:150pt; 
+    width: 150pt;
     height: 150pt;
     position: relative;
-    left: 10px;
-    position:unset;
-    margin: 2%;
-    Object-fit:cover;
-    
+    left: -1350px;
+    position: unset;
+    Object-fit: cover;
+
 }
-.titulo{
+
+.titulo {
     text-align: center;
     display: flexbox;
     nav-up: 10%;
-  
-    
-    
+    margin-top: -7.5%;
 }
 
-.minha-imagem1{
+.minha-imagem1 {
     border-radius: 100%;
     border: 10px solid rgba(41, 219, 53, 0.377);
-    width:150pt; 
+    width: 150pt;
     height: 150pt;
-    position:absolute;
+    position: absolute;
     left: 1350px;
-    margin: 3%;
-    Object-fit:cover;
+    Object-fit: cover;
+
 }
+
 .format {
     width: 99%;
     border: 10px solid rgba(41, 219, 53, 0.377);
@@ -41,23 +54,38 @@ body {
 
 
 .formatacao {
-    width: 100%;
-    height: 10%;
-    border: 40px solid rgba(41, 219, 115, 0.377);
+    color: darkgreen;
     text-align: center;
-    border-radius: 7%;
-    left: 50%;
+    width: 100%;
+    height: 700px;
+    border: 30px solid rgba(41, 219, 115, 0.377);
+    text-align: center;
+    border-radius: 2%;
+    left: 40%;
+    margin: 0%;
 }
 
 .formatacao1 {
     border-radius: 10px;
     border: 3px solid rgba(41, 219, 77, 0.503);
-    padding: 7px;
+    padding: 1px;
+    position: relative;
     text-align: center;
+    margin: 5%;
 
 }
-.retangulo{
+
+.retangulo {
     height: 100px;
     width: 100%;
     border: 3px solid rgba(50, 149, 7, 0.514);
+    padding: 0px;
+}
+
+.retangulo1 {
+    height: 100px;
+    width: 100%;
+    border: 3px solid rgba(50, 149, 7, 0.514);
+    padding: -5px;
+
 }
